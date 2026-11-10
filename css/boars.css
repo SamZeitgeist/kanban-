@@ -1,0 +1,22 @@
+/* ==========================================================
+   boars.css — падающие кабанчики по бокам окна (js/boars.js)
+   Слой fixed, клики проходят сквозь него (pointer-events: none).
+   z-index ниже шапки/модалок, поэтому окна всегда поверх.
+   ========================================================== */
+#boars-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  overflow: hidden;
+}
+.boar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  will-change: transform;
+  filter: drop-shadow(0 3px 3px rgba(34, 36, 70, .18));
+}
